@@ -84,7 +84,19 @@ public:
     }
 
     void print() {
-        if 
+        if head == nullptr) {
+            cout << "List is empty" << endl;
+            return;
+        }
+        
+        cout << "Forward:" << endl;
+        Node* current = head;
+        while (current != nullptr) {
+            cout << "    " << current->data.getName() 
+                 << " (" << current->data.getColor() 
+                 << ", " << current->data.getAge() << ")" << endl;
+            current = current->next;
+        }
     }
 
 };
