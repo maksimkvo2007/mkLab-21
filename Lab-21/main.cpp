@@ -53,6 +53,22 @@ public:
         tail = nullptr;
     }
 
+    void push_front(Goat g) {
+        Node* newNode = new Node;
+        newNode->data = g;
+        newNode->prev = nullptr;
+        newNode->next = head;
+
+        if (head == nullptr) {
+            head = newNode;
+            tail = newNode;
+        } else {
+            head->prev = newNode;
+            head = newNode;
+        }
+    }
+
+    
 
 };
 
