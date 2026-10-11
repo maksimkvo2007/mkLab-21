@@ -10,16 +10,16 @@ private:
     string name;
     string color;
 
-    string names[15] = {"Buddy", "Daisy", "Charlie", "Luna", "Max", 
-    "Bella", "Oreo", "Chloe", "Bob", "Lucy", 
-    "Buster", "Sam", "Ruby", "Oscar", "Penny"};
-
-    string colors[15] = {"Red", "Gold", "Mauve", "White", "Yellow", 
-    "Black", "Brown", "Grey", "Spotted", "Tan", 
-    "Cream", "Silver", "Patchy", "Dark", "Light"};
-
 public:
-    Goat() {   
+    Goat() {
+        string names[15] = {"Buddy", "Daisy", "Charlie", "Luna", "Max", 
+                            "Bella", "Oreo", "Chloe", "Bob", "Lucy", 
+                            "Buster", "Sam", "Ruby", "Oscar", "Penny"};
+                            
+        string colors[15] = {"Red", "Gold", "Mauve", "White", "Yellow", 
+                             "Black", "Brown", "Grey", "Spotted", "Tan", 
+                             "Cream", "Silver", "Patchy", "Dark", "Light"};
+
         age = (rand() % 20) + 1; // Random age 1-20
         name = names[rand() % 15]; // Random name
         color = colors[rand() % 15]; // Random color
