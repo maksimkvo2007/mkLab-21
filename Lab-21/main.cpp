@@ -30,11 +30,28 @@ public:
         name = n;
         color = c;
     }
-    
+
     int getAge() { return age; }
     string getName() { return name; }
     string getColor() { return color; }
 };
+
+struct Node {
+    Goat data; 
+    Node* prev;
+    Node* next;
+};
+
+class DoublyLinkedList {
+private:
+    Node* head;
+    Node* tail;
+
+public:
+    DoublyLinkedList() {
+        head = nullptr;
+        tail = nullptr;
+    }
 
 
 };
