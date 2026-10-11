@@ -19,10 +19,26 @@ private:
     "Cream", "Silver", "Patchy", "Dark", "Light"};
 
 public:
+    Goat() {   
+        age = (rand() % 20) + 1; // Random age 1-20
+        name = names[rand() % 15]; // Random name
+        color = colors[rand() % 15]; // Random color
+    }
+
+    Goat(int a, string n, string c) {
+        age = a;
+        name = n;
+        color = c;
+    }
+    
+    int getAge() { return age; }
+    string getName() { return name; }
+    string getColor() { return color; }
+};
 
 
 };
 
 int main(){
-    
+
 }
