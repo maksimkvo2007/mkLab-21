@@ -84,7 +84,7 @@ public:
     }
 
     void print() {
-        if head == nullptr) {
+        if (head == nullptr) {
             cout << "List is empty" << endl;
             return;
         }
@@ -99,8 +99,35 @@ public:
         }
     }
 
+    void print_reverse() { //copy pasted from above and just changed the names and some other smaller stuff
+        if (head == nullptr) {
+            cout << "List is empty" << endl;
+            return;
+        }
+        
+        cout << "Backward:" << endl;
+        Node* current = tail;
+        while (current != nullptr) {
+            cout << "    " << current->data.getName() 
+                 << " (" << current->data.getColor() 
+                 << ", " << current->data.getAge() << ")" << endl;
+            current = current->prev;
+        }
+    }
+
 };
 
 int main(){
+    srand(time(0));
 
+    DoublyLinkedList list;
+    int numGoats = (rand() % 16) + 5;
+
+    for (int i = 0; i < numGoats; i++) {
+        Goat newGoat; 
+        list.push_back(newGoat); 
+    }
+
+    list.print();
+    list.print_reverse();
 }
