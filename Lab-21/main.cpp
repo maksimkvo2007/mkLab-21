@@ -68,7 +68,24 @@ public:
         }
     }
 
-    
+    void push_back(Goat g) {
+        Node* newNode = new Node;
+        newNode->data = g;
+        newNode->next = nullptr;
+        newNode->prev = tail;
+
+        if (head == nullptr) {
+            head = newNode;
+            tail = newNode;
+        } else {
+            tail->next = newNode;
+            tail = newNode;
+        }
+    }
+
+    void print() {
+        if 
+    }
 
 };
 
